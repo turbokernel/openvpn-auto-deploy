@@ -117,6 +117,8 @@ sysctl -p
 
 ##Firewall rules
 
+sed -i s/^DEFAULT_FORWARD_POLICY.*/DEFAULT_FORWARD_POLICY=\"ACCEPT\"/g /etc/default/ufw
+
 sed -i '11i# END OPENVPN RULES' /etc/ufw/before.rules
 sed -i '11iCOMMIT' /etc/ufw/before.rules
 sed -i 11i-A\ POSTROUTING\ -s\ 10.8.0.0/8\ -o\ ${PUB_ETH}\ -j\ MASQUERADE /etc/ufw/before.rules

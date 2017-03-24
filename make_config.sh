@@ -1,5 +1,6 @@
 #!/bin/bash
-
+#Auth:Sam.Ma
+#client configuration
 # First argument: Client identifier
 
 KEY_DIR=~/openvpn-ca/keys
